@@ -103,10 +103,7 @@ phrases = {
   "X" => "Congratulations X!",
   "O" => "Congratulations O!",
   nil => "Cat's Game!"
-} # => {:X=>"Congratulations X!", :O=>"Congratulations O!", nil=>"Cat's Game!"}
-phrases[pl] # => nil
+} # => {"X"=>"Congratulations X!", "O"=>"Congratulations O!", nil=>"Cat's Game!"}
+phrases[pl] # => "Congratulations X!"
 
 puts phrases[pl]
-
-# >> 
-
