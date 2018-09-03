@@ -58,9 +58,9 @@ end
 c = {"X" => "Congratulations X!",
  "O" => "Congratulations O!",
  nil => "Cat's Game!"}
- # => {:X=>"Congratulations X!", :O=>"Congratulations O!", nil=>"Cat's Game!"}
+ # => {"X"=>"Congratulations X!", "O"=>"Congratulations O!", nil=>"Cat's Game!"}
 
- c["X"] # => nil
+ c[nil] # => "Congratulations X!"
 
 def turn_count(board)
   board.join.count "XO"
