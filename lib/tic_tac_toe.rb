@@ -52,8 +52,8 @@ def play(board)
 
   pl = winner(board)
   phrases = {
-    X: "Congratulations X!",
-    O: "Congratulations O!",
+    "X" => "Congratulations X!",
+    "O" => "Congratulations O!",
     nil => "Cat's Game!"
   }
 
