@@ -50,9 +50,11 @@ def play(board)
     turn(board)
   end
   pl = winner(board)
-  {X: "Congratulations X!",
-   O: "Congratulations O!",
-   nil => "Cat's Game!"}
+  phrases = {
+    X: "Congratulations X!",
+    O: "Congratulations O!",
+    nil => "Cat's Game!"
+  }
 end
 
 def turn_count(board)
