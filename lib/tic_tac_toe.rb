@@ -63,7 +63,8 @@ end
 def turn_count(board)
   board.join.count "XO"
 end
- def current_player(board)
+
+def current_player(board)
   "XO"[turn_count(board) % 2]
 end
 
@@ -72,16 +73,20 @@ def won?(board)
     ["XXX","OOO"].include? combo.map{|i| board[i]}.join
   }
 end
- def full?(board)
+
+def full?(board)
   board.join.count("XO") == board.size
 end
- def draw?(board)
+
+def draw?(board)
   full?(board) && !won?(board)
 end
- def over?(board)
+
+def over?(board)
   won?(board) || draw?(board)
 end
- def winner(board)
+
+def winner(board)
   if !won? board
     nil
   elsif board.join.count("X") > board.join.count("O")
@@ -90,3 +95,18 @@ end
     "O"
   end
 end
+
+board = ["X", "X", "X", " ", " ", " ", " ", " ", " "]
+# => ["X", "X", "X", " ", " ", " ", " ", " ", " "]
+pl = winner(board)
+phrases = {
+  "X" => "Congratulations X!",
+  "O" => "Congratulations O!",
+  nil => "Cat's Game!"
+} # => {:X=>"Congratulations X!", :O=>"Congratulations O!", nil=>"Cat's Game!"}
+phrases[pl] # => nil
+
+puts phrases[pl]
+
+# >> 
+
