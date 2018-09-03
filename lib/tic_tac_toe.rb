@@ -55,13 +55,6 @@ def play(board)
    nil => "Cat's Game!"}
 end
 
-c = {"X" => "Congratulations X!",
- "O" => "Congratulations O!",
- nil => "Cat's Game!"}
- # => {"X"=>"Congratulations X!", "O"=>"Congratulations O!", nil=>"Cat's Game!"}
-
- c[nil] # => "Congratulations X!"
-
 def turn_count(board)
   board.join.count "XO"
 end
