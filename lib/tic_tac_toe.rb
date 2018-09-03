@@ -95,15 +95,3 @@ def winner(board)
     "O"
   end
 end
-
-board = ["X", "X", "X", " ", " ", " ", " ", " ", " "]
-# => ["X", "X", "X", " ", " ", " ", " ", " ", " "]
-pl = winner(board)
-phrases = {
-  "X" => "Congratulations X!",
-  "O" => "Congratulations O!",
-  nil => "Cat's Game!"
-} # => {"X"=>"Congratulations X!", "O"=>"Congratulations O!", nil=>"Cat's Game!"}
-phrases[pl] # => "Congratulations X!"
-
-puts phrases[pl]
