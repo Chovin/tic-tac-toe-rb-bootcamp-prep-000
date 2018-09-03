@@ -49,7 +49,18 @@ def play(board)
     end
     turn(board)
   end
+  pl = winner(board)
+  {X: "Congratulations X!",
+   O: "Congratulations O!",
+   nil => "Cat's Game!"}
 end
+
+c = {"X" => "Congratulations X!",
+ "O" => "Congratulations O!",
+ nil => "Cat's Game!"}
+ # => {:X=>"Congratulations X!", :O=>"Congratulations O!", nil=>"Cat's Game!"}
+
+ c["X"] # => nil
 
 def turn_count(board)
   board.join.count "XO"
